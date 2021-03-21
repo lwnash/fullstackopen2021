@@ -120,7 +120,7 @@ const CreateNew = (props) => {
     author.reset();
     info.reset();
   };
-
+// context
   const handleSubmit = (e) => {
     e.preventDefault();
     props.addNew({
@@ -202,9 +202,8 @@ const App = () => {
       <Menu />
       <Notification notification={notification} />
       <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
+        <Route path="/about" component={<About />} />
+
         <Route path="/create">
           <CreateNew addNew={addNew} setNotification={setNotification} />
         </Route>
@@ -215,6 +214,7 @@ const App = () => {
           <AnecdoteList anecdotes={anecdotes} setAnecdotes={setAnecdotes} />
         </Route>
       </Switch>
+
       <Footer />
     </div>
   );

@@ -6,6 +6,8 @@ import Filter from "./components/Filter";
 import {initializeAnecdotes} from './reducers/anecdoteReducer'
 import { useDispatch } from "react-redux";
 
+// class function
+
 const App = () => {
   const dispatch = useDispatch()
   useEffect(() => {

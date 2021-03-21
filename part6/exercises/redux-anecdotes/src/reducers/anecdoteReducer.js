@@ -1,7 +1,8 @@
 // const getId = () => (100000 * Math.random()).toFixed(0);
 
 import anecdoteService from "../services/anecdote";
-
+// const initialState = [...]
+// [12,3,4] const count = a.reducer(a,cur => a+ cur )
 const anecdoteReducer = (state = [], action) => {
   //console.log("action", action);
   switch (action.type) {
@@ -26,7 +27,16 @@ const anecdoteReducer = (state = [], action) => {
       return state;
   }
 };
-
+/**
+ * const userData = await axios.get(url)
+ * dispatch(userData) => store => useSelector(state)
+ * dispatch({
+ *  type: 'updateUser',
+ *  payload: userData.data
+ * })
+ */
+//action creator reducer
+// do something and dispatch
 export const initializeAnecdotes = () => {
   return async dispatch => {
   const anecdotes = await anecdoteService.getAll()
@@ -46,7 +56,7 @@ export const incrementVote = (id, anecdote) => {
     })
   }
 };
-
+// 中间件 thunk 检测 dispatch 是一个 action 或者 function
 export const createAnecdote = (content) => {
   return async dispatch => {
     const newAnecdote = await anecdoteService.createNew(content)

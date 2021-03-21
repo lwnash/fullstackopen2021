@@ -12,7 +12,8 @@ const createNew = async (content) => {
   const res = await axios.post(baseUrl, obj)
   return res.data
 }
-
+// service
+// async await const a = promise.then(newPromise.then())
 const voting = async (id, votingAnectode) => {
   const res = await axios.put(`${baseUrl}/${id}`, votingAnectode)
   return res.data

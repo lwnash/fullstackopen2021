@@ -18,7 +18,7 @@ const useField = (type) => {
 const useCountry = (name) => {
   const [country, setCountry] = useState(null);
   const baseUrl = `https://restcountries.eu/rest/v2/name`;
-
+  // RESTful API
   useEffect(() => {
     (async () => {
       if (name) {
@@ -31,7 +31,7 @@ const useCountry = (name) => {
         }
       }
     })();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [name]);
   console.log(country)
   return country;

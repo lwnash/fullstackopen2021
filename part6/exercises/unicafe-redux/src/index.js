@@ -11,10 +11,17 @@ const App = () => {
       type: "GOOD",
     });
   };
-
+// dispatch(action) => change state => state in store
+// payload:{}
   const neutral = () => {
     store.dispatch({
       type: "OK",
+      payload: {
+
+      },
+      error: {
+        
+      }
     });
   };
 

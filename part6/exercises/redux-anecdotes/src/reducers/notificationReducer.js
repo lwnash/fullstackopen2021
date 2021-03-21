@@ -10,17 +10,23 @@ const notificationReducer = (state = null, action) => {
   }
 };
 
+/**
+ * clearTinout
+ *
+ */
+
 export const setNotification = (message, seconds) => {
   return async dispatch => {
     dispatch({
       type: 'set_message',
       message,
-    })
-    clearTimeout(timer)
-    timer = setTimeout(() => dispatch({
-      type: 'set_message',
-      message: null
-    }), 1000 * seconds);
+    })// thunk
+   // clearTimeout(timer)
+   // timer = setTimeout(() => dispatch({
+    //  type: 'set_message',
+    //  message: null// <></> <Nomessage />
+   // }), 1000 * seconds);
+    // promise 
   }
 };
 
